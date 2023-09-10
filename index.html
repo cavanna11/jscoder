@@ -8,21 +8,24 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 class="d-flex justify-content-center" style="font-size: 50px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-decoration: underline; text-transform: uppercase; padding-top: 90px; color: blue;">Conversor de pesos argentinos a dolar blue</h1>
+    <h1 class="d-flex justify-content-center">Conversor de pesos argentinos a dolar blue</h1>
 
     <!-- FUTURO CONVERSOR -->
-    <!-- <div class="conversor">
-        <p>Ingrese el valor en pesos argentinos:</p>
-        <input type="number"> 
+    <div class="conversor">
+        <p>Ingrese el valor en pesos argentinos</p>
+        <input type="number" id="ingresarValor">
         
         <br>
 
-        <button type="button">Calcular</button>
+        <button type="button" id="botonCalcular">Calcular</button>
 
-        <p>En USD equivale a:</p>
+        <p id="totalDolar">En USD equivale a: <script>`${valorEnDolares.toFixed(2)}`</script></p>
 
-        
-    </div> -->
+    </div>
+
+    <div class="aviso">
+        <p>ESTA SECCION POR EL MOMENTO NO FUNCIONA, SOLO MEDIANTE LAS ALERTAS. GRACIAS POR ENTENDER!.</p>
+    </div>
 
 
 

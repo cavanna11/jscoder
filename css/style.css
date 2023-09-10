@@ -1,0 +1,60 @@
+body {
+  background: linear-gradient(to right, #1e5799 0%, #2c5ce0 19%, #011481 40%, #a0afff 60%, #5297fd 83%, #1e5799 100%);
+  background-size: 10000px 100%;
+  animation: bg 15s linear infinite;
+}
+
+@keyframes bg {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 10000px;
+  }
+}
+h1 {
+  font-size: 50px;
+  font-family: impact;
+  text-decoration: underline;
+  text-transform: uppercase;
+  padding-top: 90px;
+  color: #fff;
+}
+
+.conversor {
+  color: white;
+  display: grid;
+  justify-content: center;
+  padding-top: 120px;
+}
+.conversor #botonCalcular {
+  border-radius: 10px;
+  border: none;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.conversor p {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.conversor #ingresarValor {
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+}
+
+.aviso {
+  background-color: white;
+  justify-content: center;
+}
+.aviso p {
+  color: red;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=style.css.map */
