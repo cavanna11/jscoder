@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/logo.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nixie+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/style.css">
+
     <title>Gestor de gastos</title>
 </head>
 <body>
+    
     <header>
         <section class="sectionHeader">
             <ul>
@@ -26,13 +34,13 @@
 
             <!--Section Usuario-->
             <section id="sectionUsuario" class="sectionUsuario">
-                <h1>Crear Perfil</h1>
-                <h2>Con tus datos personalizaremos tu archivo de Gestor de Gastos</h2>
+                <h1>Crea tu perfil</h1>
+                <h2>Con tus datos personalizaremos tu Archivo de Gestor de Gastos</h2>
 
                 <form id="formUsuario">
                     <button type="submit" disabled hidden class="none" aria-hidden="true"></button>
 
-                    <input type="text" id="nombre" name="nombre" placeholder=" Ingrese su nombre">
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre">
                     <input type="email" id="email" name="email" placeholder="Ingrese su email">
                     <button type="submit" id="btnCrearUsuario" class="btn">Crear</button>
                 </form>
@@ -45,10 +53,10 @@
 
                 <form id="formPresupuesto">
                     <button type="submit" disabled hidden class="none" aria-hidden="true"></button>
-
+    
                     <div>
                         <input type="number" id="presupuesto" name="presupuesto" placeholder="Ingrese su presupuesto">
-
+    
                         <select id="divisa" name="divisa">
                             <option value="divisa" selected>Divisa</option>
                             <option value="ARS">ARS</option>
@@ -88,7 +96,7 @@
                         <option value="Extras">Extras</option>
                     </select>
     
-                    <input type="number" name="monto" id="monto" placeholder=" Ingrese el monto">
+                    <input type="number" name="monto" id="monto" placeholder="Ingrese el monto">
                     
                     <button type="submit" class="btn">Agregar Gasto</button>
                     <div id="errorGasto" class="errorPresupuesto"></div>
@@ -100,7 +108,7 @@
 
             <section id="sectionRenovarPres">
                 <button type="button" id="btnRenovar" class="btn">Renovar Presupuesto</button>
-                <button type="button" id="btnEliminarArchivo" class="btn">Eliminar archivo de Gastos</button>
+                <button type="button" id="btnEliminarArchivo" class="btn">Restablecer gastos</button>
             </section>
 
             <!--Section filtrar gastos-->
@@ -108,11 +116,11 @@
 
                 <h1>Filtrar Gastos Por</h1>
                 <form id="formFiltros">
-                    <button type="submit" disabled hidden class="none" aria-hidden="true"></button> <!--Para prevenir Evento por defecto ENTER-->
+                    <button type="submit" disabled hidden class="none" aria-hidden="true"></button> 
                     
                     <select id="filtros" name="filtros" class="form-select form-select-sm" aria-label=".form-select-sm example">
                         
-                        <option selected>Mostrar gastos por:</option>
+                        <option selected>Mostrar Gastos Por:</option>
                         <option value="Categoría">Categoría</option>
                         <option value="MenorAMayor">Menor Precio a Mayor Precio</option>
                         <option value="MayorAMenor">Mayor Precio a Menor Precio</option>
@@ -124,7 +132,7 @@
                 <section id="filtrarPorCategoria">
                     
                     <select id="categoriaFiltrar" name="categoriaFiltrar" class="form-select form-select-sm mt-3" aria-label=".form-select-sm example">
-                        <option selected>Elegir categoría de gastos que desea ver</option>
+                        <option selected>Elija Categoría de Gastos que desea ver</option>
                         <option value="Alimentación">Alimentación</option>
                         <option value="Cuidado Personal">Cuidado Personal</option>
                         <option value="Entretenimiento y Salidas">Entretenimiento y Salidas</option>
@@ -193,16 +201,16 @@
     </main>
     <footer class="footer">
         <section class="sectionFooter">
-            <p>Copyright © 2023 - <a href="https://instagram.com/santicavanna.dev">Santiago Cavanna</a></p>
+            <p>Copyright © 2023 - <a href="https://instagram.com/santicavanna.dev" target="_blank">Santiago Cavanna</a></p>
         </section>
     </footer>
-
-<!--Js librerias-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<!--Js local-->
-<script src="./js/main.js"></script>
-
+    
+    <!--Js librerias-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--Js local-->
+    <script src="./js/clases.js"></script>
+    <script src="./js/funciones.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

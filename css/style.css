@@ -13,7 +13,7 @@ $btnHoverColor: ; */
 }
 
 body {
-  background-image: url(../../assets/fondo1.jpg);
+  background-image: url(../../assets/fondo4.jpg);
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
@@ -338,7 +338,8 @@ body::before {
   background-color: hsl(214, 100%, 68%);
 }
 .footer .sectionFooter p {
-  padding: 15px;
+  margin: 0;
+  padding: 20px;
   font-family: "poppins", sans-serif;
   font-weight: 400;
   color: hsl(96, 71%, 99%);
@@ -350,6 +351,17 @@ body::before {
 }
 .footer .sectionFooter p a:hover {
   color: hsl(216, 28%, 20%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  font-family: "Open Sans", sans-serif;
+}
+* a {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

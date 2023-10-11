@@ -10,7 +10,7 @@
 }
 body{
     
-  background-image: url(../../assets/fondo1.jpg);
+  background-image: url(../../assets/fondo4.jpg);
   background-attachment: fixed;
   background-position:center center;
   background-size: cover;
@@ -439,7 +439,8 @@ body{
 
   .sectionFooter{
       p{
-          padding: 15px;
+          margin:0;
+          padding: 20px;
           font-family: 'poppins', sans-serif;
           font-weight: 400;
           color: $txtBlanco;
