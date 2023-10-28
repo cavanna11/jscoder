@@ -288,14 +288,14 @@ const apis = () => {
     //Dolar hoy
     fetch("https://criptoya.com/api/dolar")
     .then(response => response.json())
-    .then(({solidario, blue}) => {
+    .then(({oficial, blue}) => {
 
-        let dolarSolidario = document.getElementById(`solidario`)
+        let dolarOficial = document.getElementById(`oficial`)
         let dolarBlue = document.getElementById(`blue`)
 
-        dolarSolidario.innerHTML = ``
-        dolarSolidario.innerHTML += `
-        Solidario: ${solidario}`
+        dolarOficial.innerHTML = ``
+        dolarOficial.innerHTML += `
+        Oficial: ${oficial}`
 
         dolarBlue.innerHTML = ``
         dolarBlue.innerHTML += `
@@ -304,7 +304,7 @@ const apis = () => {
 
     //Conversor de moneda
     let myHeaders = new Headers();
-    myHeaders.append("apikey", "xTSp083De3jdN6gDfkoYCXuO6HgBh0xQ");
+    myHeaders.append("apikey", "hSHGOBsNFJh6wKV7XrPLPyJYloPYbuVa");
 
     let requestOptions = {
     method: 'GET',
@@ -313,7 +313,7 @@ const apis = () => {
     };
 
     //api layer
-    fetch("https://api.apilayer.com/currency_data/live?source=ARS&currencies=USD,EUR,AUD", requestOptions)
+    fetch("https://api.apilayer.com/currency_data/live?source=ARS&currencies=USD,EUR,USDOF", requestOptions)
     .then(response => response.json())
     .then(result => {
 
@@ -323,12 +323,8 @@ const apis = () => {
         let usd = document.querySelector(`#USD`)
         usd.dataset.cambio = result.quotes.ARSUSD
         
-        let aud = document.querySelector(`#AUD`)
-        aud.dataset.cambio = result.quotes.ARSAUD
-
-        console.log(result.quotes.ARSAUD)
-        console.log(result.quotes.ARSEUR)
-        console.log(result.quotes.ARSUSD)
+        let usdof = document.querySelector(`#USDOF`)
+        aud.dataset.cambio = result.quotes.ARSUSDOF
 
         inputs.forEach(input => {
             input.value = input.dataset.cambio
